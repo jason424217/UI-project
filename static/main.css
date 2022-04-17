@@ -3,3 +3,12 @@
 .page_container {
   margin: 20px;
 }
+.navbar{
+  background-color: lightblue;
+}
+.nav-link{
+  color:black
+}
+.navbar-brand{
+  color:black
+}

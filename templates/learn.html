@@ -1,0 +1,63 @@
+<!-- HTML template -->
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <script src="{{url_for('static', filename='learn.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='learn.css')}}">
+<script>
+     let id = {{ id }};
+   
+     
+</script>
+<div class="row">
+    <div class="col">
+        <div class="progress">
+            <div class="progress-bar  progress-bar-striped" role="progressbar"  aria-valuenow="percentage" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+       <h2 class="text-center"></h2>
+    </div>
+</div>
+<div class="row" id="video">
+    <div class="col-md-6" >
+          <iframe width="590" height="360" id="source" src="">
+            </iframe>
+    </div>
+    <div class="col-md-6 images" >
+       <div class="row" id="image-row" >
+            <div class="col-md-6 text-center images"   >
+                <img id="position-img" src="" style="width:100%"/>
+               <b> Court Position</b>
+            </div>
+            <div class="col-md-6 text-center images"  >
+                 <img id="move-img" src=""  style="width:100%"/>
+                <b>Player Movement</b> 
+            </div>
+       </div>
+       
+       <div class="row">
+           <div class="col">
+            <p id="position-text"></p>
+           </div>
+        
+    </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 text-center">
+        <button id="prev" class="btn btn-danger">Prev</button>
+    </div>
+    <div class="col-md-6 text-center">
+        <button id="next" class="btn btn-danger">Next</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 text-center" id="quiz-button"></div>
+</div>
+
+
+{% endblock %}

@@ -2,9 +2,26 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
+<link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+    <script src="{{url_for('static', filename='home.js')}}"></script>
 <div class="page_container">
-  Hello
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center ">In this web app, we will learn basic concept of basketball’s 5 positions, their duty and overall position sketch  in a court.</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button class="btn btn-primary" id="learn-button">Start Learning!</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button class="btn btn-danger" id="quiz-button">Confident to already take the quiz?</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

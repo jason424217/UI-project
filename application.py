@@ -1,8 +1,10 @@
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
+from matplotlib.font_manager import json_dump
 import pandas as pd
 import numpy as np
+import json
 
 application = Flask(__name__)
 
@@ -65,10 +67,23 @@ courses = {
 }
 
 # ROUTES
+
+
 @application.route('/')
 def homepage():
     return render_template('homepage.html')
 
 
+@application.route("/learn/<id>")
+def learn(id):
+    return render_template("learn.html",  id=id)
+
+
+@application.route('/getdata', methods=['GET'])
+def getdata():
+    id = json.loads(list(request.args.to_dict().keys())[0])['id']
+    return jsonify(data=courses[str(id)])
+
+
 if __name__ == '__main__':
-   application.run(debug = True)
+    application.run(debug=True)
