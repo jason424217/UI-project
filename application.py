@@ -13,59 +13,37 @@ num_of_quiz = 6
 usr_choice = []
 quiz_data = {
     0: {
-        "position": "PG (Point Guard)",
+        "position": "PG",
         "video": "https://www.youtube.com/embed/izzHABI1F2I?start=3",
-        "courtPosition": "https://i.ibb.co/pW6TPts/PG-position.jpg",
         "courtMoveMap": "https://i.ibb.co/mFp1SMB/PG-movemap.jpg",
-        "description": "Brain of a team. Mainly responsible for dribbling ball through the court, organizing tactic and"
-                       " passing ball to teammate with space to shot. "
-                       "Famous player: Magic Johnson, Stephen Curry, Chris Paul"
+        "options": ["PG","SG","SF","PF","C"]
     },
     1: {
-        "position": "SG (Score Guard)",
+        "position": "SG",
         "video": "https://www.youtube.com/embed/wb_qC3ZcCyw",
-        "courtPosition": "https://i.ibb.co/n8bv1Dt/SG-position.jpg",
         "courtMoveMap": "https://i.ibb.co/S752SnB/SG-movemap.jpg",
-        "description": "Outside scorer of a team. Mainly responsible for running through half court and finding a space "
-                       "to catch the ball and shot."
-                       "Famous Player: Michael Jordan, Kobe Bryant"
+        "options": ["PG","SG","SF","PF","C"]
     },
     2: {
-        "position": "SF (Small Forward)",
+        "position": "SF",
         "video": "https://www.youtube.com/embed/uBgtirMRQFQ",
         "courtPosition": "https://i.ibb.co/pdpLj3T/SF-position.jpg",
         "courtMoveMap": "https://i.ibb.co/H75L9cB/SF-movemap.jpg",
-        "description": "Score core of a team. Mainly responsible for multiple tasks including both inside and outside "
-                       "offense/defense and sometimes rebound."
-                       "Famous Player: Lebron James, Larry Bird, Kevin Durant"
+        "options": ["PG","SG","SF","PF","C"]
     },
     3: {
-        "position": "PF (Power Forward)",
+        "position": "PF",
         "video": "https://www.youtube.com/embed/0tbWhV-PkIY",
         "courtPosition": "https://i.ibb.co/CJXZMnH/PF-position.jpg",
         "courtMoveMap": "https://i.ibb.co/SJcn5hD/PF-movemap.jpg",
-        "description": "Inside defender of a team. Mainly responsible for scrambling rebound, picking and rolling "
-                       "for PG, blocking opponent in paint area and other “dirty” and tiring work. "
-                       "Famous player: Tim Duncan, Kevin Garnett"
+        "options": ["PG","SG","SF","PF","C"]
     },
     4: {
-        "position": "C (Center)",
+        "position": "C",
         "video": "https://www.youtube.com/embed/j_Chf5qBQPY?start=6",
         "courtPosition": "https://i.ibb.co/x2w0Jm9/C-position.jpg",
         "courtMoveMap": "https://i.ibb.co/pymk5tG/C-movemap.jpg",
-        "description": "Inside core of a team. Mainly responsible for paint area offense, scrambling rebound and "
-                       "defending insider opponent. "
-                       "Famous player: Dwight Howard, Shaq O’Neal"
-    },
-    5: {
-        "video": "https://www.youtube.com/embed/1xu8W10vymo",
-        "courtImg": "https://i.ibb.co/S5n8dFX/teamposition.jpg",
-        "description": "In a game, normally in both offense and defense: PG dribbles through back court, stands on top"
-                       " of arc and manage tactic. SG continue running around the half court, as long as he get rid of"
-                       " defender, he can catch ball and shoot outside. SF stand between inside and outside so that "
-                       "he can choose flexible offense and defense transition. PF competes with opponents around paint "
-                       "area and wait for rebound or give a block. C stands under the basket and posts up after "
-                       "obtaining good position."
+        "options": ["PG","SG","SF","PF","C"]
     }
 }
 # init usr_choice
@@ -85,6 +63,10 @@ def quiz_start():
     '''
     Initial page to Start quiz
     '''
+    global usr_choice
+    usr_choice = []
+    for i in range(num_of_quiz):
+        usr_choice.append({'choice':"None",'correct':"False"})
     return render_template('quiz_start.html')
 
 
@@ -119,7 +101,7 @@ def update_usr_choice(qid):
     usr_choice[int(qid)]["choice"] = json_data["choice"]
     usr_choice[int(qid)]["correct"] = json_data["correct"]
     print("type is ", type(json_data["choice"]))
-
+    print("usr_choice",usr_choice)
     return jsonify(data = usr_choice)
 
 @application.route('/quiz/score')
