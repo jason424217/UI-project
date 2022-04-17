@@ -70,7 +70,7 @@ quiz_data = {
 }
 # init usr_choice
 for i in range(num_of_quiz):
-    usr_choice.append({'choice':None,'correct':False})
+    usr_choice.append({'choice':"None",'correct':"False"})
 
 
 # === ROUTES ===========================================================================================================
@@ -108,16 +108,19 @@ def quiz(qid):
         print(len(usr_choice)-1, "is user_choice")
         return render_template('quiz_last.html',qid=qid, usr_choice=usr_choice)
 
-
 @application.route('/update_usr_choice/<qid>', methods=['POST'])
 def update_usr_choice(qid):
     '''
     Ajax call to update global var usr_choice
     '''
-    pass
-    # json_data = request.get_json()
-    #
-    # return jsonify(data = data)
+    global usr_choice
+
+    json_data = request.get_json()
+    usr_choice[int(qid)]["choice"] = json_data["choice"]
+    usr_choice[int(qid)]["correct"] = json_data["correct"]
+    print("type is ", type(json_data["choice"]))
+
+    return jsonify(data = usr_choice)
 
 @application.route('/quiz/score')
 def quiz_score():
@@ -125,7 +128,14 @@ def quiz_score():
     Quiz score page
     Calculate score from usr_choice
     '''
-    return render_template('quiz_score.html')
+    global usr_choice
+
+    score = 0
+    for choice in usr_choice:
+        if choice["correct"] == "True" or choice["correct"] == "true":
+            score+=1
+
+    return render_template('quiz_score.html', score=score, usr_choice=usr_choice)
 
 
 # === Main ===========================================================================================================

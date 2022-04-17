@@ -43,10 +43,42 @@ function updateMsg(){
     for(let key in checkMap){
         if(!checkMap[key]){
             $('#wrong-text').text("Wrong!")
+            $.ajax({
+                type: "POST",
+                url: "/update_usr_choice/"+qid,                
+                dataType : "json",
+                contentType: "application/json; charset=utf-8",
+                data : JSON.stringify({'choice':checkMap, 'correct':'False'}),
+                success: function(result){
+                    console.log("success")
+                },
+                error: function(request, status, error){
+                    console.log("Error");
+                    console.log(request)
+                    console.log(status)
+                    console.log(error)
+                }
+            });
             return
         }
     }
     $('#correct-text').text("Correct!")
+    $.ajax({
+        type: "POST",
+        url: "/update_usr_choice/"+qid,                
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : JSON.stringify({'choice':checkMap, 'correct':'True'}),
+        success: function(result){
+            console.log("success")
+        },
+        error: function(request, status, error){
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
 }
 
 $(document).ready(function(){
