@@ -34,21 +34,26 @@ $(document).ready(function(){
         } else {
             correct = 'false'
         }
-        $.ajax({
-            type: "POST",
-            url: "/update_usr_choice/"+qid,
-            dataType : "json",
-            contentType: "application/json; charset=utf-8",
-            data : JSON.stringify({'choice':choice, 'correct':correct}),
-            success: function(result){
-                console.log("success")
-            },
-            error: function(request, status, error){
-                console.log("Error");
-                console.log(request)
-                console.log(status)
-                console.log(error)
-            }
-        });
+
+        // Ajax call in safari might fail, so make multiple call
+        for (let i = 0; i < 5; i++) {
+          $.ajax({
+                      type: "POST",
+                      url: "/update_usr_choice/"+qid,
+                      dataType : "json",
+                      contentType: "application/json; charset=utf-8",
+                      data : JSON.stringify({'choice':choice, 'correct':correct}),
+                      success: function(result){
+                          console.log("success")
+                      },
+                      error: function(request, status, error){
+                          console.log("Error");
+                          console.log(request)
+                          console.log(status)
+                          console.log(error)
+                      }
+          });
+        }
+        // event.preventDefault();
     });
 })

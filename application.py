@@ -87,7 +87,7 @@ def quiz(qid):
         return render_template('quiz.html',qid=qid, usr_choice=usr_choice, quiz_data=quiz_data[qidInt])
     elif qidInt == len(usr_choice)-1:
         # drag and drop quiz
-        print(len(usr_choice)-1, "is user_choice")
+        # print(len(usr_choice)-1, "is user_choice")
         return render_template('quiz_last.html',qid=qid, usr_choice=usr_choice)
 
 @application.route('/update_usr_choice/<qid>', methods=['POST'])
@@ -100,7 +100,7 @@ def update_usr_choice(qid):
     json_data = request.get_json()
     usr_choice[int(qid)]["choice"] = json_data["choice"]
     usr_choice[int(qid)]["correct"] = json_data["correct"]
-    print("type is ", type(json_data["choice"]))
+    # print("type is ", type(json_data["choice"]))
     print("usr_choice",usr_choice)
     return jsonify(data = usr_choice)
 
