@@ -5,6 +5,7 @@
 // usr_choice:list of dict {'choice':None,'correct':False}
 // quiz_data:
 $(document).ready(function(){
+    console.log(usr_choice)
     // Prev and Next button
     if (parseInt(qid)==0) {
         console.log('here')
