@@ -28,8 +28,9 @@
         <div class="pos" id="pos-sf" data-pos="SF"></div>
         <div id="correct-text"></div>
         <div id="wrong-text" class="red"></div>
-        <a id="next_button" href="/quiz/5" class="btn btn-primary">Reset</a>
-        <a id="next_button" href="/quiz/score" class="btn btn-primary">Next</a>
+        <a id="reset_button" href="/quiz/5" class="btn btn-primary">Reset</a>
+        <a id="prev_button" href="/quiz/{{ qid|int-1 if qid|int-1>=0 else ''}}" class="btn btn-primary">Prev</a>
+        <a id="next_button" href="/quiz/score" class="btn btn-primary">Submit</a>
     </div>
 </div>
 
