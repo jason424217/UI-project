@@ -53,3 +53,7 @@
 .choice{
     border: 1px solid grey;
 }
+
+.red {
+    color: red;
+}
