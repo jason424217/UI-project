@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='quiz_last.css')}}">
+<script>
+    let qid = {{qid|tojson}}
+    let usr_choice = {{usr_choice|tojson}}
+</script>
+<script src="{{url_for('static', filename='quiz_last.js')}}"></script>
+
+<div class="last_quiz_container">
+    <div>
+        <b>Drag different positions to correct boxes on court</b>
+    </div>
+        <img src="https://i.ibb.co/p1Fm6jt/basketball-court.png" alt="basketball-court" border="0" class="inline-block" />
+        <div id="post" class="inline-block">
+            <div class="choice" data-choice="PG">PG</div>
+            <div class="choice" data-choice="SG">SG</div>
+            <div class="choice" data-choice="SF">SF</div>
+            <div class="choice" data-choice="PF">PF</div>
+            <div class="choice" data-choice="C">C</div>
+        </div>
+        <div class="pos" id="pos-sg" data-pos="SG"></div>
+        <div class="pos" id="pos-pf" data-pos="PF"></div>
+        <div class="pos" id="pos-pg" data-pos="PG"></div>
+        <div class="pos" id="pos-c" data-pos="C"></div>
+        <div class="pos" id="pos-sf" data-pos="SF"></div>
+        <div id="correct-text"></div>
+        <div id="wrong-text"></div>
+        <a id="next_button" href="/quiz/score" class="btn btn-primary">Next</a>
+    </div>
+</div>
+
+{% endblock %}

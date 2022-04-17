@@ -43,11 +43,14 @@ def quiz(qid):
     global usr_choice
     global quiz_data
 
-    if qid != len(usr_choice)-1:
+    qidInt = int(qid)
+
+    if qidInt >= 0 and qidInt < len(usr_choice)-1:
         return render_template('quiz.html',qid=qid, usr_choice=usr_choice)
-    else:
+    elif qidInt == len(usr_choice)-1:
         # drag and drop quiz
-        return render_template('quiz.html',qid=qid, usr_choice=usr_choice)
+        print(len(usr_choice)-1, "is user_choice")
+        return render_template('quiz_last.html',qid=qid, usr_choice=usr_choice)
 
 
 @application.route('/update_usr_choice/<qid>', methods=['POST'])

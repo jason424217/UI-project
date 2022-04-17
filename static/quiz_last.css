@@ -1,0 +1,55 @@
+.last_quiz_container {
+    position: relative;
+}
+
+.pos {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:lightblue;
+}
+
+#pos-sg{
+    position: absolute;
+    top: 50px;
+    left: 120px;
+}
+
+#pos-pf{
+    position: absolute;
+    top: 130px;
+    left: 80px;
+}
+
+#pos-pg{
+    position: absolute;
+    top: 155px;
+    left: 165px;
+}
+
+#pos-c{
+    position: absolute;
+    top: 165px;
+    left: 35px;
+}
+
+#pos-sf{
+    position: absolute;
+    top: 230px;
+    left: 60px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.choice{
+    border: 1px solid grey;
+}
