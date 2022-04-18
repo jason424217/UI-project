@@ -7,8 +7,9 @@ function generateUI(data){
         $("#image-row").append(img)
         img.append("Court Movement")
 
-        let button = $("<button>").html("Wanna take the quiz now?")
-        button.addClass("btn btn-primary quiz")
+        let button = $("<button>").html(`<a href="/quiz">Wanna take the quiz now?</a>`)
+        button.addClass("btn btn-warning quiz")
+        button.css("color","white")
         $("#quiz-button").append(button)
     }
     else{
