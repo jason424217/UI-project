@@ -108,6 +108,9 @@ quiz_data = {
         "courtPosition": "https://i.ibb.co/x2w0Jm9/C-position.jpg",
         "courtMoveMap": "https://i.ibb.co/pymk5tG/C-movemap.jpg",
         "options": ["PG","SG","SF","PF","C"]
+    },
+    5: {
+        "position": "Drag and drop",
     }
 }
 # init usr_choice
@@ -195,7 +198,7 @@ def quiz_score():
         if choice["correct"] == "True" or choice["correct"] == "true":
             score+=1
 
-    return render_template('quiz_score.html', score=score, usr_choice=usr_choice)
+    return render_template('quiz_score.html', score=score, usr_choice=usr_choice, quiz_data=quiz_data)
 
 
 # === Main ===========================================================================================================
