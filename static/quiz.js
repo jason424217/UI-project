@@ -19,12 +19,36 @@ $(document).ready(function(){
     // Prefill user choice
     console.log(usr_choice)
     if (usr_choice[parseInt(qid)]['choice']!='None') {
-        $("#radios"+usr_choice[parseInt(qid)]['choice']).prop("checked", true);
+        let choice_ele = $('.quiz-options[value='+usr_choice[parseInt(qid)]['choice']+']')
+        let choice = choice_ele.attr('value')
+        choice_ele.css('background-color','rgb(173,216,230)')
+        if (quiz_data['position'] === choice) {
+            choice_ele.find('.correct-svg').removeClass("display-none");
+        } else {
+            choice_ele.find('.wrong-svg').removeClass("display-none");
+            $('.quiz-options[value='+quiz_data['position']+']').find('.correct-svg').removeClass("display-none");
+            $('.quiz-explain').removeClass("display-none");
+        }
     }
 
     // Update user choice
-    $('#next_button').click(function() {
-        let choice = $('input[name="exampleRadios"]:checked').val();
+    $('.quiz-options').click(function() {
+        if (usr_choice[parseInt(qid)]['choice']!='None') {
+            return
+        }
+        let choice = $(this).attr('value')
+
+        // Show ans and explain
+        $(this).css('background-color','rgb(173,216,230)')
+        if (quiz_data['position'] === choice) {
+            $(this).find('.correct-svg').removeClass("display-none");
+        } else {
+            $(this).find('.wrong-svg').removeClass("display-none");
+            $('.quiz-options[value='+quiz_data['position']+']').find('.correct-svg').removeClass("display-none");
+            $('.quiz-explain').removeClass("display-none");
+        }
+
+        //
         if (typeof choice == 'undefined') {
             choice = 'None'
         }
@@ -45,6 +69,7 @@ $(document).ready(function(){
                       data : JSON.stringify({'choice':choice, 'correct':correct}),
                       success: function(result){
                           console.log("success")
+                          usr_choice = result.data
                       },
                       error: function(request, status, error){
                           console.log("Error");
