@@ -80,34 +80,49 @@ quiz_data = {
         "position": "PG",
         "video": "https://www.youtube.com/embed/izzHABI1F2I?start=3",
         "courtMoveMap": "https://i.ibb.co/mFp1SMB/PG-movemap.jpg",
-        "options": ["PG","SG","SF","PF","C"]
+        "options": ["PG","SG","SF","PF","C"],
+        "description": "Brain of a team. Mainly responsible for dribbling ball through the court, organizing tactic and"
+                       " passing ball to teammate with space to shot. "
+                       "Famous player: Magic Johnson, Stephen Curry, Chris Paul"
     },
     1: {
         "position": "SG",
         "video": "https://www.youtube.com/embed/wb_qC3ZcCyw",
         "courtMoveMap": "https://i.ibb.co/S752SnB/SG-movemap.jpg",
-        "options": ["PG","SG","SF","PF","C"]
+        "options": ["PG","SG","SF","PF","C"],
+        "description": "Outside scorer of a team. Mainly responsible for running through half court and finding a space "
+                       "to catch the ball and shot."
+                       "Famous Player: Michael Jordan, Kobe Bryant"
     },
     2: {
         "position": "SF",
         "video": "https://www.youtube.com/embed/uBgtirMRQFQ",
         "courtPosition": "https://i.ibb.co/pdpLj3T/SF-position.jpg",
         "courtMoveMap": "https://i.ibb.co/H75L9cB/SF-movemap.jpg",
-        "options": ["PG","SG","SF","PF","C"]
+        "options": ["PG","SG","SF","PF","C"],
+        "description": "Score core of a team. Mainly responsible for multiple tasks including both inside and outside "
+                       "offense/defense and sometimes rebound."
+                       "Famous Player: Lebron James, Larry Bird, Kevin Durant"
     },
     3: {
         "position": "PF",
         "video": "https://www.youtube.com/embed/0tbWhV-PkIY",
         "courtPosition": "https://i.ibb.co/CJXZMnH/PF-position.jpg",
         "courtMoveMap": "https://i.ibb.co/SJcn5hD/PF-movemap.jpg",
-        "options": ["PG","SG","SF","PF","C"]
+        "options": ["PG","SG","SF","PF","C"],
+        "description": "Inside defender of a team. Mainly responsible for scrambling rebound, picking and rolling "
+                       "for PG, blocking opponent in paint area and other “dirty” and tiring work. "
+                       "Famous player: Tim Duncan, Kevin Garnett"
     },
     4: {
         "position": "C",
         "video": "https://www.youtube.com/embed/j_Chf5qBQPY?start=6",
         "courtPosition": "https://i.ibb.co/x2w0Jm9/C-position.jpg",
         "courtMoveMap": "https://i.ibb.co/pymk5tG/C-movemap.jpg",
-        "options": ["PG","SG","SF","PF","C"]
+        "options": ["PG","SG","SF","PF","C"],
+        "description": "Inside core of a team. Mainly responsible for paint area offense, scrambling rebound and "
+                       "defending insider opponent. "
+                       "Famous player: Dwight Howard, Shaq O’Neal"
     },
     5: {
         "position": "Drag and drop",
