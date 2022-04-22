@@ -14,32 +14,32 @@
 
 #pos-sg{
     position: absolute;
-    top: 50px;
-    left: 120px;
+    top: 40px;
+    left: 140px;
 }
 
 #pos-pf{
     position: absolute;
-    top: 130px;
-    left: 80px;
+    top: 110px;
+    left: 90px;
 }
 
 #pos-pg{
     position: absolute;
-    top: 155px;
-    left: 165px;
+    top: 140px;
+    left: 175px;
 }
 
 #pos-c{
     position: absolute;
-    top: 165px;
-    left: 35px;
+    top: 155px;
+    left: 50px;
 }
 
 #pos-sf{
     position: absolute;
-    top: 230px;
-    left: 60px;
+    top: 220px;
+    left: 80px;
 }
 
 .inline-block {
@@ -52,8 +52,18 @@
 
 .choice{
     border: 1px solid grey;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .red {
     color: red;
+}
+
+.green {
+    color: green;
 }
