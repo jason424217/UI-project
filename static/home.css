@@ -2,3 +2,26 @@
     margin:10px;
     align-content:center
 }
+
+#learn-button {
+    background-color: cornflowerblue;
+    font-size: large;
+    color: white;
+    font-weight: bold;
+}
+
+#quiz-button {
+    background-color: orangered;
+    font-size: large;
+    color: white;
+}
+
+#intro {
+    font-size: large;
+    margin-bottom: 100px;
+}
+
+#keyWord {
+    font-size: larger;
+    font-weight: bolder;
+}

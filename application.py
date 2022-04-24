@@ -16,7 +16,8 @@ courses = {
         "courtPosition": "https://i.ibb.co/pW6TPts/PG-position.jpg",
         "courtMoveMap": "https://i.ibb.co/mFp1SMB/PG-movemap.jpg",
         "description": "Brain of a team. Mainly responsible for dribbling ball through the court, organizing tactic and"
-                       " passing ball to teammate with space to shot. "
+                       " passing ball to teammate with space to shot. In the video, look at No 3 player Chirs Paul "
+                       "dribbling ball from back-court to front court and throwing ball to teammate. <br>"
                        "Famous player: Magic Johnson, Stephen Curry, Chris Paul"
     },
     "2": {
@@ -25,7 +26,8 @@ courses = {
         "courtPosition": "https://i.ibb.co/n8bv1Dt/SG-position.jpg",
         "courtMoveMap": "https://i.ibb.co/S752SnB/SG-movemap.jpg",
         "description": "Outside scorer of a team. Mainly responsible for running through half court and finding a space "
-                       "to catch the ball and shot."
+                       "to catch the ball and shot. In the viedo, look at No 11 player Klay Thompson shooting that "
+                       "3 point ball! <br>"
                        "Famous Player: Michael Jordan, Kobe Bryant"
     },
     "3": {
@@ -34,7 +36,8 @@ courses = {
         "courtPosition": "https://i.ibb.co/pdpLj3T/SF-position.jpg",
         "courtMoveMap": "https://i.ibb.co/H75L9cB/SF-movemap.jpg",
         "description": "Score core of a team. Mainly responsible for multiple tasks including both inside and outside "
-                       "offense/defense and sometimes rebound."
+                       "offense/defense and sometimes rebound. In the video, look at No 7 player Kevin Durant dribbling"
+                       " ball to the basket and finishing with a jump shot. <br>"
                        "Famous Player: Lebron James, Larry Bird, Kevin Durant"
     },
     "4": {
@@ -43,7 +46,9 @@ courses = {
         "courtPosition": "https://i.ibb.co/CJXZMnH/PF-position.jpg",
         "courtMoveMap": "https://i.ibb.co/SJcn5hD/PF-movemap.jpg",
         "description": "Inside defender of a team. Mainly responsible for scrambling rebound, picking and rolling "
-                       "for PG, blocking opponent in paint area and other “dirty” and tiring work. "
+                       "for PG, blocking opponent in paint area and other “dirty” and tiring work. In the video, look "
+                       "at No 21 player Tim Duncan who defences opponents' inner player and give him a block at the "
+                       "end. <br>"
                        "Famous player: Tim Duncan, Kevin Garnett"
     },
     "5": {
@@ -52,7 +57,9 @@ courses = {
         "courtPosition": "https://i.ibb.co/x2w0Jm9/C-position.jpg",
         "courtMoveMap": "https://i.ibb.co/pymk5tG/C-movemap.jpg",
         "description": "Inside core of a team. Mainly responsible for paint area offense, scrambling rebound and "
-                       "defending insider opponent. "
+                       "defending insider opponent. In the video, look at No 12 player Dwight Howard that jumps high"
+                       " while running to the basket, he catches the passed ball and finishes a dunk against "
+                       "opponent! <br>"
                        "Famous player: Dwight Howard, Shaq O’Neal"
     },
     "6": {
@@ -63,7 +70,9 @@ courses = {
                        " defender, he can catch ball and shoot outside. SF stand between inside and outside so that "
                        "he can choose flexible offense and defense transition. PF competes with opponents around paint "
                        "area and wait for rebound or give a block. C stands under the basket and posts up after "
-                       "obtaining good position."
+                       "obtaining good position. In the video, No 30 PG cooperate with No 23 PF and No 35 SF, pass ball"
+                       " and try to find a shooting position, but finally, PF find space inside and throws the ball to "
+                       "No 15 C who finally catches and finishes."
     }
 }
 
@@ -82,7 +91,8 @@ quiz_data = {
         "courtMoveMap": "https://i.ibb.co/mFp1SMB/PG-movemap.jpg",
         "options": ["PG","SG","SF","PF","C"],
         "description": "Brain of a team. Mainly responsible for dribbling ball through the court, organizing tactic and"
-                       " passing ball to teammate with space to shot. "
+                       " passing ball to teammate with space to shot. In the video, look at No 3 player Chirs Paul "
+                       "dribbling ball from back-court to front court and throwing ball to teammate. "
                        "Famous player: Magic Johnson, Stephen Curry, Chris Paul"
     },
     1: {
@@ -90,8 +100,9 @@ quiz_data = {
         "video": "https://www.youtube.com/embed/wb_qC3ZcCyw",
         "courtMoveMap": "https://i.ibb.co/S752SnB/SG-movemap.jpg",
         "options": ["PG","SG","SF","PF","C"],
-        "description": "Outside scorer of a team. Mainly responsible for running through half court and finding a space "
-                       "to catch the ball and shot."
+        "description": "Outside scorer of a team. Mainly responsible for running through half court and finding a space"
+                       " to catch the ball and shot. In the viedo, look at No 11 player Klay Thompson shooting that "
+                       "3 point ball! "
                        "Famous Player: Michael Jordan, Kobe Bryant"
     },
     2: {
@@ -101,7 +112,8 @@ quiz_data = {
         "courtMoveMap": "https://i.ibb.co/H75L9cB/SF-movemap.jpg",
         "options": ["PG","SG","SF","PF","C"],
         "description": "Score core of a team. Mainly responsible for multiple tasks including both inside and outside "
-                       "offense/defense and sometimes rebound."
+                       "offense/defense and sometimes rebound. In the video, look at No 7 player Kevin Durant dribbling"
+                       " ball to the basket and finishing with a jump shot. "
                        "Famous Player: Lebron James, Larry Bird, Kevin Durant"
     },
     3: {
@@ -111,7 +123,9 @@ quiz_data = {
         "courtMoveMap": "https://i.ibb.co/SJcn5hD/PF-movemap.jpg",
         "options": ["PG","SG","SF","PF","C"],
         "description": "Inside defender of a team. Mainly responsible for scrambling rebound, picking and rolling "
-                       "for PG, blocking opponent in paint area and other “dirty” and tiring work. "
+                       "for PG, blocking opponent in paint area and other “dirty” and tiring work. In the video, look "
+                       "at No 21 player Tim Duncan who defences opponents' inner player and give him a block at the "
+                       "end."
                        "Famous player: Tim Duncan, Kevin Garnett"
     },
     4: {
@@ -121,7 +135,8 @@ quiz_data = {
         "courtMoveMap": "https://i.ibb.co/pymk5tG/C-movemap.jpg",
         "options": ["PG","SG","SF","PF","C"],
         "description": "Inside core of a team. Mainly responsible for paint area offense, scrambling rebound and "
-                       "defending insider opponent. "
+                       "defending insider opponent. In the video, look at No 12 player Dwight Howard that jumps high"
+                       " while running to the basket, he catches the passed ball and finishes a dunk against opponent! "
                        "Famous player: Dwight Howard, Shaq O’Neal"
     },
     5: {

@@ -7,7 +7,7 @@ function generateUI(data){
         $("#image-row").append(img)
         img.append("Court Movement")
 
-        let button = $("<button>").html(`<a href="/quiz">Wanna take the quiz now?</a>`)
+        let button = $("<button class='directQuiz'>").html("Wanna take the quiz now?")
         button.addClass("btn btn-warning quiz")
         button.css("color","white")
         $("#quiz-button").append(button)
@@ -35,8 +35,8 @@ function fetchData(id){
         contentType:"application/json;charset=utf-8",
         data:JSON.stringify({'id':id}),
         success:function(result){
-            console.log(result.data)
-            generateUI(result.data)
+            console.log(result["data"])
+            generateUI(result["data"])
             
         },
         error:function(request,status,error){
@@ -86,7 +86,11 @@ $(document).ready(()=>{
 
 
     })
+
     $(document).on('click','#directQuiz',()=>{
+        window.location.href='/quiz'
+    })
+    $(document).on('click','.directQuiz',()=>{
         window.location.href='/quiz'
     })
 })
