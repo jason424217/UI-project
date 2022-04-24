@@ -5,5 +5,5 @@ $(document).ready(()=>{
 
     $(document).on('click',"#quiz-button",()=>{
         window.location.href="/quiz"
-})
     })
+})

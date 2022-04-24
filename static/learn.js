@@ -7,10 +7,13 @@ function generateUI(data){
         $("#image-row").append(img)
         img.append("Court Movement")
 
-        let button = $("<button>").html(`<a href="/quiz">Wanna take the quiz now?</a>`)
+        let button = $("<button class='directQuiz'>").html("Wanna take the quiz now?")
         button.addClass("btn btn-warning quiz")
         button.css("color","white")
         $("#quiz-button").append(button)
+
+        // hide direct quiz button for last leanr page
+        $("#directQuiz").hide();
     }
     else{
     $("#position-img").attr("src",data.courtPosition)
@@ -32,8 +35,8 @@ function fetchData(id){
         contentType:"application/json;charset=utf-8",
         data:JSON.stringify({'id':id}),
         success:function(result){
-            console.log(result.data)
-            generateUI(result.data)
+            console.log(result["data"])
+            generateUI(result["data"])
             
         },
         error:function(request,status,error){
@@ -76,12 +79,18 @@ $(document).ready(()=>{
         window.location.href=`/learn/${id+1}`
     
    
-})
-$(document).on('click','.quiz',()=>{
-        
-    window.location.href=`/`
+    })
+    $(document).on('click','.quiz',()=>{
+
+        window.location.href='/'
 
 
-})
+    })
 
+    $(document).on('click','#directQuiz',()=>{
+        window.location.href='/quiz'
+    })
+    $(document).on('click','.directQuiz',()=>{
+        window.location.href='/quiz'
+    })
 })
