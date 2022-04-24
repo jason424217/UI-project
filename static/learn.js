@@ -11,6 +11,9 @@ function generateUI(data){
         button.addClass("btn btn-warning quiz")
         button.css("color","white")
         $("#quiz-button").append(button)
+
+        // hide direct quiz button for last leanr page
+        $("#directQuiz").hide();
     }
     else{
     $("#position-img").attr("src",data.courtPosition)
@@ -76,12 +79,14 @@ $(document).ready(()=>{
         window.location.href=`/learn/${id+1}`
     
    
-})
-$(document).on('click','.quiz',()=>{
-        
-    window.location.href=`/`
+    })
+    $(document).on('click','.quiz',()=>{
+
+        window.location.href='/'
 
 
-})
-
+    })
+    $(document).on('click','#directQuiz',()=>{
+        window.location.href='/quiz'
+    })
 })

@@ -11,5 +11,11 @@
 #position-text{
     font-size: 20px;
     text-align: justify;
-    
+}
+ .move-btn{
+    background-color: cornflowerblue;
+}
+
+#directQuiz {
+    background-color: orangered;
 }
