@@ -3,12 +3,29 @@
 .page_container {
   padding: 20px;
 }
+
 .navbar{
-  background-color: lightblue;
+  background-color: rgb(0,63,140);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: box-shadow 0.2s ease-out 1ms;
 }
-.nav-link{
-  color:black
+
+.navbar:hover{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-.navbar-brand{
-  color:black
+
+.nav-link {
+  color: white;
+}
+.nav-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.navbar-brand {
+  color: white;
+}
+.navbar-brand:hover {
+  color: white;
+  text-decoration: underline;
 }
