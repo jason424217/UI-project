@@ -8,23 +8,32 @@
     let usr_choice = {{usr_choice|tojson}}
     let quiz_data = {{quiz_data|tojson}}
 </script>
+<link rel="stylesheet" href="{{url_for('static', filename='quiz.css')}}">
 
 <div class="page_container">
-    <div>Score is {{score}}</div>
 
+
+
+    <div class="score_val quiz_card">
+      {{score}}/6
+      <div>
+        <a href='https://en.wikipedia.org/wiki/Basketball_positions' class="h6">Learn more about basketball postions </a>
+      </div>
+    </div>
+
+    <div class="score_container quiz_card">
     <div>
-        <span class="h5">User choice:</span> <br>
-        Correct ans, User choice
+        <span class="h3">Review:</span> <br>
         <!--    Loop through all user choice    -->
         {% for usr_ans in usr_choice %}
-        <div style="border-bottom:1px solid grey;">
-            {{loop.index}}.
+        <div class="quiz_ans">
+            <span class="h6">Question {{loop.index}}:</span> <br>
             <!--    Correct ans    -->
-            {{quiz_data[loop.index-1].position}}
+            The question was asking {{quiz_data[loop.index-1].position}}. <br>
             <!--    User choice    -->
             {% if loop.index != usr_choice|length or usr_ans.choice == 'None' %}
                 <!--    MCQ    -->
-                {{usr_ans.choice}}
+                Your choice was {{usr_ans.choice}}
                 {% if (usr_ans.correct == 'true') or (usr_ans.correct == 'True') or (usr_ans.correct == True) %}
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
@@ -39,7 +48,7 @@
                 <!--    Drag and drop    -->
                 {% for key,val in usr_ans.choice.items() %}
                 <div>
-                    {{key}}
+                    Your answer for {{key}}  was
                     {{val == True}}
                     {% if (val == 'true') or (val == 'True') or (val == True) %}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -56,6 +65,8 @@
             {% endif %}
         </div>
         {% endfor %}
+    </div>
+
     </div>
 </div>
 

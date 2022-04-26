@@ -15,17 +15,17 @@
     <!--  Media  -->
 
     <div class="row quiz-row">
-        <div class="quiz-title h2">Watch the video below and select corresponding position.</div>
+        <div class="quiz-title h2">Watch the video below <br> and select corresponding position.</div>
         <div class="col-md-7">
+            <div class="quiz-explain display-none quiz_card">
+                <div class="h5">Explanation:</div>
+                {{quiz_data.description}}
+            </div>
             <div class="quiz-media quiz_card">
                 <iframe width="100%" height="300px"
                         src="{{quiz_data.video}}">
                 </iframe>
                 <img src="{{quiz_data.courtMoveMap}}">
-            </div>
-            <div class="quiz-explain display-none quiz_card">
-                <div class="h5">Explanation:</div>
-                {{quiz_data.description}}
             </div>
         </div>
         <!--    MCQ    -->

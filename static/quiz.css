@@ -35,14 +35,14 @@
    clear: both;
 }
 
-/* UI design */
+/* Quiz UI */
 body {
   background-color: rgb(242,242,242);
 }
 
 .quiz-title {
   margin: 20px auto;
-
+  text-align: center;
 }
 
 .quiz-row {
@@ -59,10 +59,12 @@ body {
   padding: 15px;
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(0, 0, 0, 0.48) 0.7px 1.4px 1.4px;
 }
 
 .quiz_card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.43) 2.4px 4.8px 4.8px;
 }
 
 .quiz-media {
@@ -85,4 +87,37 @@ img {
 
 iframe {
   display: block;
+}
+
+/* Quiz start page UI */
+.quiz_desc {
+  width: fit-content;
+  height: fit-content;
+  margin: 20px auto;
+  margin-top: 100px;
+}
+
+.start-quiz-button {
+  width: fit-content;
+  margin: auto;
+  display: block;
+}
+
+
+/* Quiz score page UI */
+.score_container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.score_val {
+  width: 700px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.quiz_ans {
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(242,242,242);
 }

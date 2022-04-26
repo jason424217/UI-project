@@ -3,9 +3,11 @@
 
 {% block content %}
 
+<link rel="stylesheet" href="{{url_for('static', filename='quiz.css')}}">
+
 <div class="page_container">
   <div class="quiz_desc h3">Ready to start quiz?</div>
-  <a href="/quiz/0" class="btn btn-primary">Start Quiz</a>
+  <a href="/quiz/0" class="btn btn-primary start-quiz-button">Start Quiz</a>
 </div>
 
 {% endblock %}
