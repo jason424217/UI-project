@@ -5,7 +5,17 @@
 // usr_choice:list of dict {'choice':None,'correct':False}
 // quiz_data:
 $(document).ready(function(){
-    console.log(usr_choice)
+    // Render card border
+    // "box-shadow: blue 0px 0px 0px 2px inset," ";"
+//    let card_border = ["blue 0px 0px 0px 2px", "rgb(255, 255, 255) 10px -10px 0px -3px", "rgb(31, 193, 27) 10px -10px", "rgb(255, 255, 255) 20px -20px 0px -3px", "rgb(255, 217, 19) 20px -20px", "rgb(255, 255, 255) 30px -30px 0px -3px", "rgb(255, 156, 85) 30px -30px", "rgb(255, 255, 255) 40px -40px 0px -3px", "rgb(255, 85, 85) 40px -40px"]
+//
+//    let border_idx = 2*parseInt(qid)
+//    console.log(border_idx)
+//    let card_border_css = card_border[border_idx]+' inset, '+card_border.slice(border_idx+1).join(', ')
+//    console.log(card_border_css);
+//    $('.quiz-mcq').css("box-shadow", card_border_css);
+
+    console.log(usr_choice);
     // Prev and Next button
     if (parseInt(qid)==0) {
         console.log('here')

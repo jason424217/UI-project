@@ -1,3 +1,4 @@
+/* Quiz options */
 .quiz-options {
   width: 200px;
   border:1px solid #f5f5f5;
@@ -15,4 +16,73 @@
 
 .display-none {
   display: none;
+}
+
+#prev_button {
+  display: block;
+  float: left;
+}
+
+#next_button {
+  display: block;
+  float: right;
+}
+
+.clearfix::after {
+   content: " ";
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/* UI design */
+body {
+  background-color: rgb(242,242,242);
+}
+
+.quiz-title {
+  margin: 20px auto;
+
+}
+
+.quiz-row {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.quiz_card {
+  border:1px solid #f5f5f5;
+  border-radius: 4px;
+  align-items: center;
+  background-color: white;
+  width: fit-content;
+  padding: 15px;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.quiz_card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.quiz-media {
+  height: fit-content;
+}
+
+.quiz-mcq {
+  margin: calc(50vh - 177px - 100px) 20px;
+}
+
+.quiz-explain {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+iframe {
+  display: block;
 }
