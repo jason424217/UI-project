@@ -1,11 +1,11 @@
 first = false;
 checkMap = {}
 
-
 function dragChoice(){
     $(".choice").draggable({
+        scroll: false,
         stack: ".choice",
-        revert: "invalid"
+        revert: "invalid",
     })
 }
 
@@ -19,7 +19,9 @@ function stringValid(a) {
 
 function dropChoice() {
     $('.pos').droppable({
+        accept: ".choice",
         drop: function (event, ui) {
+            var $this = $(this);
             let choice = $(ui.draggable).data('choice')
             let pos = $(this).data('pos')
             console.log("choice and pos are " + choice + " and " + pos);
@@ -30,6 +32,14 @@ function dropChoice() {
             }
             first = true;
             updateMsg()
+            ui.draggable.position({
+                my: "center",
+                at: "center",
+                of: $this,
+                using: function(pos) {
+                  $(this).animate(pos, "slow", "linear");
+                }
+              });
         }
     })
 }
@@ -42,7 +52,7 @@ function updateMsg(){
     }
     for(let key in checkMap){
         if(!checkMap[key]){
-            $('#hint-text').html(`<div><div class="red">Wrong!</div> PG dribbles through back court, stands on top of arc and manage tactic. SG continue running around the half court, as long as he get rid of defender, he can catch ball and shoot outside. SF stand between inside and outside so that he can choose flexible offense and defense transition. PF competes with opponents around paint area and wait for rebound or give a block. C stands under the basket and posts up after obtaining good position.
+            $('#hint-text').html(`<div class="darkgrey"><div class="red">Wrong!</div> PG dribbles through back court. SG continue running around the half court. SF stand between inside and outside PF competes with opponents around paint area. C stands under the basket.
             <a href="/learn/6" target="_blank">Click here to review again</a>.<div>`)
             $('#hint-text').removeClass("display-none");
             $.ajax({

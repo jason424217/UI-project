@@ -10,8 +10,8 @@
 <script src="{{url_for('static', filename='quiz_last.js')}}"></script>
 
 <div class="last_quiz_container">
-    <div class="row">
-        <div class="col-md-12 ml-1 mb-3 mt-3 h4"><b>Drag different positions to correct boxes on court</b></div>
+    <div class="row mt-1 mb-1">
+        <div class="col-md-12"><span class="h4">Drag different positions to correct boxes on court</span></div>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -23,20 +23,20 @@
             <div class="pos" id="pos-sf" data-pos="SF"></div>
         </div>
         <div id="post" class="col-md-4 inline-block">
-            <div class="choice btn btn-light" data-choice="PG">PG</div>
-            <div class="choice btn btn-light" data-choice="SG">SG</div>
-            <div class="choice btn btn-light" data-choice="SF">SF</div>
-            <div class="choice btn btn-light" data-choice="PF">PF</div>
-            <div class="choice btn btn-light" data-choice="C">C</div>
+            <div class="choice btn btn-dark" data-choice="PG">PG</div>
+            <div class="choice btn btn-dark" data-choice="SG">SG</div>
+            <div class="choice btn btn-dark" data-choice="SF">SF</div>
+            <div class="choice btn btn-dark" data-choice="PF">PF</div>
+            <div class="choice btn btn-dark" data-choice="C">C</div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div id="hint-text" class="quiz-explain quiz_card display-none"></div>
+            <div id="hint-text" class="mt-2 quiz_card display-none"></div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 mt-1">
+        <div class="col-md-12 mt-2">
             <a id="reset_button" href="/quiz/5" class="btn btn-primary mr-3">Reset</a>
             <a id="prev_button" href="/quiz/{{ qid|int-1 if qid|int-1>=0 else ''}}" class="btn btn-primary mr-3">Prev</a>
             <a id="next_button" href="/quiz/score" class="btn btn-primary mr-3">Submit</a>

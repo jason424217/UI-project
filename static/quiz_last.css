@@ -7,9 +7,7 @@
     height: 40px;
     width: 40px;
     padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 5px;
     background-color:lightblue;
 }
 
@@ -52,13 +50,13 @@
 }
 
 .choice{
-    border: 1px solid grey;
-    margin-bottom: 23px;
+    position: relative;
+    margin-bottom: 10px;
     height: 40px;
     width: 40px;
-    display:flex;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .red {
@@ -82,10 +80,7 @@ body {
     border-radius: 4px;
     align-items: center;
     background-color: white;
-    width: fit-content;
-    padding: 15px;
     transition: box-shadow 0.2s ease-out 1ms;
-
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     box-shadow: rgba(0, 0, 0, 0.48) 0.7px 1.4px 1.4px;
 }
