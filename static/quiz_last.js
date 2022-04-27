@@ -35,15 +35,16 @@ function dropChoice() {
 }
 
 function updateMsg(){
-    $('#correct-text').text("")
-    $('#wrong-text').text("")
+    $('#hint-text').text("")
+    $('#hint-text').addClass("display-none");
     if(Object.keys(checkMap).length != 5){
         return
     }
     for(let key in checkMap){
         if(!checkMap[key]){
-            $('#wrong-text').html(`<div><div class="red">Wrong!</div> PG dribbles through back court, stands on top of arc and manage tactic. SG continue running around the half court, as long as he get rid of defender, he can catch ball and shoot outside. SF stand between inside and outside so that he can choose flexible offense and defense transition. PF competes with opponents around paint area and wait for rebound or give a block. C stands under the basket and posts up after obtaining good position.
+            $('#hint-text').html(`<div><div class="red">Wrong!</div> PG dribbles through back court, stands on top of arc and manage tactic. SG continue running around the half court, as long as he get rid of defender, he can catch ball and shoot outside. SF stand between inside and outside so that he can choose flexible offense and defense transition. PF competes with opponents around paint area and wait for rebound or give a block. C stands under the basket and posts up after obtaining good position.
             <a href="/learn/6" target="_blank">Click here to review again</a>.<div>`)
+            $('#hint-text').removeClass("display-none");
             $.ajax({
                 type: "POST",
                 url: "/update_usr_choice/"+qid,                
@@ -63,7 +64,8 @@ function updateMsg(){
             return
         }
     }
-    $('#correct-text').html('<div class="green">Correct!</div>');
+    $('#hint-text').html('<div class="green">Correct!</div>');
+    $('#hint-text').removeClass("display-none");
     $.ajax({
         type: "POST",
         url: "/update_usr_choice/"+qid,                

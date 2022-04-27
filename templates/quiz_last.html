@@ -11,36 +11,35 @@
 
 <div class="last_quiz_container">
     <div class="row">
-        <div class="col-md-12"><b>Drag different positions to correct boxes on court</b></div>
+        <div class="col-md-12 ml-1 mb-3 mt-3 h4"><b>Drag different positions to correct boxes on court</b></div>
     </div>
     <div class="row">
         <div class="col-md-6">
-        <img src="https://i.ibb.co/p1Fm6jt/basketball-court.png" alt="basketball-court" border="0" class="inline-block" />
+            <img src="https://i.ibb.co/p1Fm6jt/basketball-court.png" alt="basketball-court" border="0" class="inline-block" />
             <div class="pos" id="pos-sg" data-pos="SG"></div>
             <div class="pos" id="pos-pf" data-pos="PF"></div>
             <div class="pos" id="pos-pg" data-pos="PG"></div>
             <div class="pos" id="pos-c" data-pos="C"></div>
             <div class="pos" id="pos-sf" data-pos="SF"></div>
         </div>
-        <div id="post" class="col-md-6 inline-block">
-            <div class="choice" data-choice="PG">PG</div>
-            <div class="choice" data-choice="SG">SG</div>
-            <div class="choice" data-choice="SF">SF</div>
-            <div class="choice" data-choice="PF">PF</div>
-            <div class="choice" data-choice="C">C</div>
+        <div id="post" class="col-md-4 inline-block">
+            <div class="choice btn btn-light" data-choice="PG">PG</div>
+            <div class="choice btn btn-light" data-choice="SG">SG</div>
+            <div class="choice btn btn-light" data-choice="SF">SF</div>
+            <div class="choice btn btn-light" data-choice="PF">PF</div>
+            <div class="choice btn btn-light" data-choice="C">C</div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div id="correct-text"></div>
-            <div id="wrong-text"></div>
+            <div id="hint-text" class="quiz-explain quiz_card display-none"></div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <a id="reset_button" href="/quiz/5" class="btn btn-primary">Reset</a>
-            <a id="prev_button" href="/quiz/{{ qid|int-1 if qid|int-1>=0 else ''}}" class="btn btn-primary">Prev</a>
-            <a id="next_button" href="/quiz/score" class="btn btn-primary">Submit</a>
+        <div class="col-md-12 mt-1">
+            <a id="reset_button" href="/quiz/5" class="btn btn-primary mr-3">Reset</a>
+            <a id="prev_button" href="/quiz/{{ qid|int-1 if qid|int-1>=0 else ''}}" class="btn btn-primary mr-3">Prev</a>
+            <a id="next_button" href="/quiz/score" class="btn btn-primary mr-3">Submit</a>
         </div>
     </div>
     
