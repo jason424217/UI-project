@@ -7,12 +7,12 @@
 .navbar{
   background-color: rgb(0,63,140);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  transition: box-shadow 0.2s ease-out 1ms;
+  /* transition: box-shadow 0.2s ease-out 1ms; */
 }
 
-.navbar:hover{
+/* .navbar:hover{
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
+} */
 
 .nav-link {
   color: white;
