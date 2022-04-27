@@ -43,6 +43,7 @@ body {
 .quiz-title {
   margin: 20px auto;
   text-align: center;
+  color: rgb(68,68,68);
 }
 
 .quiz-row {
@@ -59,11 +60,13 @@ body {
   padding: 15px;
   transition: box-shadow 0.2s ease-out 1ms;
 
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(0, 0, 0, 0.48) 0.7px 1.4px 1.4px;
 }
 
 .quiz_card:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+  box-shadow: rgba(0, 0, 0, 0.43) 2.4px 4.8px 4.8px;
 }
 
 .quiz-media {
