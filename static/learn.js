@@ -24,6 +24,8 @@ function generateUI(data){
     
     $("#position-text").html(data.description)
 
+    // keep nav bar's seleced option
+    $("#positionList").val(id);
 }
 
 
