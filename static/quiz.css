@@ -40,10 +40,17 @@ body {
   background-color: rgb(242,242,242);
 }
 
+.grey {
+  color: rgb(68,68,68);
+}
+
+.darkgrey {
+  color: rgb(33,37,41);
+}
+
 .quiz-title {
   margin: 20px auto;
   text-align: center;
-  color: rgb(68,68,68);
 }
 
 .quiz-row {
@@ -78,7 +85,6 @@ body {
 .quiz-explain {
   margin-top: 10px;
   margin-bottom: 20px;
-  color: rgb(68,68,68);
 }
 
 img {
@@ -96,7 +102,6 @@ iframe {
   height: fit-content;
   margin: 20px auto;
   margin-top: 100px;
-  color: rgb(68,68,68);
 }
 
 .start-quiz-button {
