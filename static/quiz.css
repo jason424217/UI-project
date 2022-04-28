@@ -129,10 +129,10 @@ iframe {
   border-bottom: 1px solid rgb(242,242,242);
 }
 
-.darkgrey {
-  color: darkgrey;
-}
-
 .black{
   color: black;
+}
+
+.red {
+  color: red;
 }
