@@ -26,8 +26,8 @@
         <span class="h3">Review:</span> <br>
         <!--    Loop through all user choice    -->
         {% for usr_ans in usr_choice %}
-        <div class="quiz_ans">
-            <span class="h6">Question {{loop.index}}:</span> <br>
+        <div class="quiz_ans darkgrey">
+            <span class="h6 black">Question {{loop.index}}:</span> <br>
             <!--    Correct ans    -->
             The question was asking {{quiz_data[loop.index-1].position}}. <br>
             <!--    User choice    -->
