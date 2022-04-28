@@ -1,5 +1,6 @@
 first = false;
 checkMap = {}
+choicesMap = {}
 
 function dragChoice(){
     $(".choice").draggable({
@@ -30,6 +31,7 @@ function dropChoice() {
             }else{
                 checkMap[pos] = false
             }
+            choicesMap[choice] = pos
             first = true;
             updateMsg()
             ui.draggable.position({
@@ -71,6 +73,7 @@ function updateMsg(){
                     console.log(error)
                 }
             });
+            reposChoice();
             return
         }
     }
@@ -92,9 +95,28 @@ function updateMsg(){
             console.log(error)
         }
     });
+    reposChoice();
 }
 
 $(document).ready(function(){
     dragChoice()
     dropChoice()
+    $(window).resize(function() {
+        reposChoice();
+    });
 })
+
+function reposChoice() {
+    $('.choice').each(function(){
+        let pos = choicesMap[$(this).data('choice')]
+        console.log(pos)
+        if (pos !== undefined){
+            pos = pos.toLowerCase()
+            $(this).position({
+                my: "center",
+                at: "center",
+                of: $('#pos-'+pos),
+              });
+        }
+    });
+}
