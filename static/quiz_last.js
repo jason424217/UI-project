@@ -7,6 +7,10 @@ function dragChoice(){
         scroll: false,
         stack: ".choice",
         revert: "invalid",
+        stop: function(){
+            // Make it properly draggable again
+            $(this).draggable('option','revert','invalid');
+        }
     })
 }
 
@@ -21,7 +25,19 @@ function stringValid(a) {
 function dropChoice() {
     $('.pos').droppable({
         accept: ".choice",
+        tolerance: "intersect",
         drop: function (event, ui) {
+            var $this = $(this);
+            console.log("drag number:  " + $this.find(".choice").length);
+            if ($this.find(".choice").length > 0) { // if there is already 1 draggable element, revert the dragged
+                                                       // one and not judge this drag
+                ui.draggable.draggable('option','revert', true);
+                return;
+            }
+            ui.draggable.appendTo($this).css({
+                top: '0px',
+                left: '0px'
+            });
             var $this = $(this);
             let choice = $(ui.draggable).data('choice')
             let pos = $(this).data('pos')
@@ -49,8 +65,8 @@ function dropChoice() {
 function updateMsg(){
     $('#hint-text').text("")
     $('#hint-text').addClass("display-none");
-    if(Object.keys(checkMap).length != 5){
-        return
+    if ($("#post .choice").length > 0) { // if user has not dragged all button
+        return;
     }
     for(let key in checkMap){
         if(!checkMap[key]){
