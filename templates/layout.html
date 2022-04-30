@@ -27,18 +27,23 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav mr-auto">
-              <li class="nav-item"  >
-                  <a class="nav-link" id="study-link" href="/learn/1">Study</a>
-                  <select id="positionList">
-                      <option value="0" selected>Choose</option>
-                      <option value="1">PG</option>
-                      <option value="2">SG</option>
-                      <option value="3">SF</option>
-                      <option value="4">PF</option>
-                      <option value="5">C</option>
-                      <option value="6">Team</option>
-                  </select>
+            <li class="nav-item">
+                <a class="nav-link"  id="study-link"href="/learn/1">Study</a>
               </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Short Links
+                </a>
+                <div class="dropdown-menu" id ="positionList" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/learn/1">Point Guard</a>
+                  <a class="dropdown-item" href="/learn/2">Shooting Guard</a>
+                  <a class="dropdown-item" href="/learn/3">Small Forward</a>
+                  <a class="dropdown-item" href="/learn/4">Power Forward</a>
+                  <a class="dropdown-item" href="/learn/5">Center</a>
+                  <a class="dropdown-item" href="/learn/6">Team</a>
+                </div>
+              </li>
+              
 
               <li class="nav-item">
                   <a class="nav-link" href="/quiz">Quiz</a>

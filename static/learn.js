@@ -1,19 +1,22 @@
 function generateUI(data){
+    $("#position_info").html(data.position)
+    $("#position_info").css({"margin-top":"10px","text-decoration":"underline"})
     if(id==6){
-        // let row=document.getElementById("image-row")
-        let img = $(`<div >`).html(`<img style="width:100%" src=${data.courtImg}/>`)
+        let card=$(`<div>`)
+        card.addClass("card")
+        let card_body=$(`<div>`)
+        card_body.addClass("card-body")
+        let img = $(`<div >`).html("")
         img.addClass("col-md-8 text-center")
         img.css({"margin":"10px"})
+       
+        card_body.html(`<img style="width:100%" src=${data.courtImg}/>`)
+        card.append(card_body)
+        img.append(card)
         $("#image-row").append(img)
-        img.append("Court Movement")
+        card_body.append("<b>Court Movement</b>")
 
-        let button = $("<button class='directQuiz'>").html("Wanna take the quiz now?")
-        button.addClass("btn btn-warning quiz")
-        button.css("color","white")
-        $("#quiz-button").append(button)
-
-        // hide direct quiz button for last leanr page
-        $("#directQuiz").hide();
+        $("#directQuiz").html("Lets take the quiz!");
     }
     else{
     $("#position-img").attr("src",data.courtPosition)
@@ -51,6 +54,7 @@ function fetchData(id){
 }
 
 $(document).ready(()=>{
+    
     $(".active").removeClass("active");
    $("#study-link").addClass("active");
     fetchData(id)
