@@ -2,7 +2,11 @@
     margin:10px;
     align-content:center
 }
-
+body{
+    background-repeat: no-repeat;
+    background-image: url('https://wallpaperaccess.com/full/139513.jpg');
+    background-size: contain
+     }
 #learn-button {
     background-color: cornflowerblue;
     font-size: large;
@@ -19,6 +23,7 @@
 #intro {
     font-size: large;
     margin-bottom: 100px;
+    color:white
 }
 
 #keyWord {
