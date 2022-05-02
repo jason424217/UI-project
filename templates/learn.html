@@ -12,30 +12,40 @@
 </script>
 <div class="row">
     <div class="col">
-        <div class="progress">
-            <div class="progress-bar  progress-bar-striped" role="progressbar"  aria-valuenow="percentage" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress" >
+            <div class="progress-bar " role="progressbar"  aria-valuenow="percentage" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
     </div>
 </div>
 <div class="row">
     <div class="col">
-       <h2 class="text-center"></h2>
+       <h2 class="text-center" id="position_info"></h2>
     </div>
 </div>
 <div class="row" id="video">
-    <div class="col-md-6" >
+    <div class="col-md-5" >
           <iframe width="590" height="360" id="source" src="">
             </iframe>
     </div>
-    <div class="col-md-6 images" >
+    <div class="col-md-7 images" >
        <div class="row" id="image-row" >
             <div class="col-md-6 text-center images"   >
-                <img id="position-img" src="" style="width:100%"/>
-               <b> Court Position</b>
+                <div class="card image-card">
+                    <div class="card-body">
+                        <img id="position-img" src="" style="width:100%"/>
+                        <b> Court Position</b>
+                    </div>
+                </div> 
             </div>
             <div class="col-md-6 text-center images"  >
+                <div class="card image-card">
+                    <div class="card-body">
                  <img id="move-img" src=""  style="width:100%"/>
                 <b>Player Movement</b> 
+            </div>
+
+        </div>
+        
             </div>
        </div>
        
@@ -48,15 +58,16 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6 text-center">
+    <div class="col-md-4 text-center">
         <button id="prev" class="btn move-btn">Prev</button>
     </div>
-    <div class="col-md-6 text-center">
-        <button id="next" class="btn move-btn">Next</button>
-    </div>
-    <div class="col-md-12 text-center">
+    <div class="col-md-4 text-center">
         <button id="directQuiz" class="btn directQuiz">Confident to direct quiz?</button>
     </div>
+    <div class="col-md-4 text-center">
+        <button id="next" class="btn move-btn">Next</button>
+    </div>
+    
 </div>
 <div class="row">
     <div class="col-md-12 text-center" id="quiz-button"></div>
