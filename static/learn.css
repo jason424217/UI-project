@@ -1,9 +1,14 @@
+body {
+    background-color: rgb(242,242,242);
+}
+
 #video{
     margin:5%;
     margin-bottom:20px;
     margin-right:20px;
     
 }
+
 .images{
     padding:10px;
     padding-top:0px

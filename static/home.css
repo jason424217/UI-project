@@ -2,11 +2,14 @@
     margin:10px;
     align-content:center
 }
+
 body{
     background-repeat: no-repeat;
-    background-image: url('https://wallpaperaccess.com/full/139513.jpg');
-    background-size: contain
-     }
+    background-image: url('https://c0.wallpaperflare.com/preview/784/813/77/white-and-orange-basketball-backboard-and-hoop-during-daytime.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 #learn-button {
     background-color: cornflowerblue;
     font-size: large;
@@ -23,7 +26,7 @@ body{
 #intro {
     font-size: large;
     margin-bottom: 100px;
-    color:white
+    color: black;
 }
 
 #keyWord {

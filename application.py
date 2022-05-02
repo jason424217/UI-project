@@ -70,9 +70,7 @@ courses = {
                        " defender, he can catch ball and shoot outside. SF stand between inside and outside so that "
                        "he can choose flexible offense and defense transition. PF competes with opponents around paint "
                        "area and wait for rebound or give a block. C stands under the basket and posts up after "
-                       "obtaining good position. In the video, No 30 PG cooperate with No 23 PF and No 35 SF, pass ball"
-                       " and try to find a shooting position, but finally, PF find space inside and throws the ball to "
-                       "No 15 C who finally catches and finishes."
+                       "obtaining good position."
     }
 }
 
