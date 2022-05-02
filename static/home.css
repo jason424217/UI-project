@@ -4,8 +4,9 @@
 }
 
 body{
+    background-color: rgb(242,242,242);;
     background-repeat: no-repeat;
-    background-image: url('https://c0.wallpaperflare.com/preview/784/813/77/white-and-orange-basketball-backboard-and-hoop-during-daytime.jpg');
+    /*background-image: url('https://c0.wallpaperflare.com/preview/784/813/77/white-and-orange-basketball-backboard-and-hoop-during-daytime.jpg');*/
     background-size: cover;
     background-position: center;
 }
