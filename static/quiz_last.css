@@ -1,6 +1,7 @@
 .last_quiz_container {
     position: relative;
-    margin-left: 20px;
+    margin: 0 auto;
+    width:700px;
 }
 
 .pos {
@@ -99,3 +100,19 @@ body {
 .display-none {
     display: none;
   }
+
+/* Shengjin Li changes */
+.quiz-title {
+  margin: 20px auto;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.last_navigation {
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.darkgrey {
+  color: rgb(33,37,41);
+}
