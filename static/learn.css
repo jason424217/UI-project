@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: rgb(242,242,242);
 }
 
@@ -16,7 +16,7 @@ body {
     font-size: 20px;
     text-align: justify;
 }
- .move-btn{
+.move-btn{
     background-color: cornflowerblue;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 .progress-bar{
-    /* background-color: orangered; */
+    background-color: orangered;
 }
 .image-card{
     transition: box-shadow 0.2s ease-out 1ms;
@@ -43,13 +43,25 @@ body {
 }
 .image-card:hover{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
+} */
 
 
 /* New layout css */
+body {
+    background-color: rgb(242,242,242);
+}
+#directQuiz {
+    background-color: orangered;
+    color:white
+}
+#directQuiz:hover {
+    background-color: #cc3700;
+}
+
 .learn_page_container {
   width: 1000px;
-  margin: 10px auto;
+  margin: 30px auto;
+  padding: 20px 50px;
 }
 
 .learn_card {
@@ -57,7 +69,6 @@ body {
   border-radius: 4px;
   align-items: center;
   background-color: white;
-  padding: 15px;
   transition: box-shadow 0.2s ease-out 1ms;
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -68,5 +79,33 @@ body {
 }
 
 .learn_title {
-  text-align: center;
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.learn_sub_title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+hr {
+  border-top: 3px solid #bbb;
+  border-radius: 3px;
+}
+
+#source {
+  margin:0 auto;
+  display:block;
+}
+
+.row {
+  align-items: center;
+}
+
+.navigation {
+  width: fit-content;
+  margin: 0 auto;
 }

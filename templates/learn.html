@@ -19,17 +19,47 @@
 </div>
 
 <!-- New layout -->
-<!-- <div class="learn_page_container learn_card">
-  <div class="learn_title" id="position_info"></div>
+<div class="learn_page_container learn_card">
+  <div class="learn_title hr" id="position_info"></div>
+  <hr>
+  <div class="learn_sub_title">Video Example:</div>
+  <div class="row">
+    {% if id|int != 6 %}
+    <div class="col-md-8">
+      <iframe width="100%" height="360" id="source" src=""></iframe>
+    </div>
+    <div class="col-md-4">
+      <img id="position-img" src="" style="width:100%"/>
+      <img id="move-img" src=""  style="width:100%"/>
+    </div>
+    {% else %}
+    <div class="col-md-6">
+      <iframe width="100%" height="360" id="source" src=""></iframe>
+    </div>
+    <div class="col-md-6">
+      <img id="allpos-img" src="" style="width:100%"/>
+    </div>
+    {% endif %}
+  </div>
 
-</div> -->
+  <div class="learn_sub_title">Description:</div>
+  <p id="position-text"></p>
+  <br>
+
+  <div class="navigation">
+    <button id="prev" class="btn btn-primary">Prev</button>
+    <button id="directQuiz" class="btn directQuiz">Confident to direct quiz?</button>
+    <button id="next" class="btn btn-primary">Next</button>
+  </div>
+</div>
 <!-- New layout end -->
 
-<div class="row">
+<!-- <div class="row">
     <div class="col">
        <h2 class="text-center" id="position_info"></h2>
     </div>
 </div>
+
 <div class="row" id="video">
     <div class="col-md-5" >
           <iframe width="590" height="360" id="source" src="">
@@ -46,14 +76,12 @@
                 </div>
             </div>
             <div class="col-md-6 text-center images"  >
-                <div class="card image-card">
-                    <div class="card-body">
-                 <img id="move-img" src=""  style="width:100%"/>
-                <b>Player Movement</b>
-            </div>
-
-        </div>
-
+              <div class="card image-card">
+                  <div class="card-body">
+                    <img id="move-img" src=""  style="width:100%"/>
+                    <b>Player Movement</b>
+                  </div>
+              </div>
             </div>
        </div>
 
@@ -61,10 +89,10 @@
            <div class="col">
             <p id="position-text"></p>
            </div>
-
-    </div>
+        </div>
     </div>
 </div>
+
 <div class="row">
     <div class="col-md-4 text-center">
         <button id="prev" class="btn move-btn">Prev</button>
@@ -75,7 +103,7 @@
     <div class="col-md-4 text-center">
         <button id="next" class="btn move-btn">Next</button>
     </div>
-</div>
+</div> -->
 
 
 

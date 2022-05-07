@@ -13,8 +13,12 @@
 <div class="page_container">
 
 
-
+    {% if score|int >= 4 %}
+    <div class="score_val quiz_card green">
+    {% else %}
     <div class="score_val quiz_card red">
+    {% endif %}
+
       {{score}}/6
       <div>
         <a href='https://en.wikipedia.org/wiki/Basketball_positions' class="h6 darkgrey">Learn more about basketball postions </a>

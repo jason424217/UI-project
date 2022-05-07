@@ -1,4 +1,4 @@
-.row{
+/* .row{
     margin:10px;
     align-content:center
 }
@@ -6,22 +6,22 @@
 body{
     background-color: rgb(242,242,242);
     background-repeat: no-repeat;
-    /*background-image: url('https://c0.wallpaperflare.com/preview/784/813/77/white-and-orange-basketball-backboard-and-hoop-during-daytime.jpg');*/
+    background-image: url('https://c0.wallpaperflare.com/preview/784/813/77/white-and-orange-basketball-backboard-and-hoop-during-daytime.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #learn-button {
-    /* background-color: cornflowerblue; */
+    background-color: cornflowerblue;
     font-size: large;
-    /* color: white; */
+    color: white;
     font-weight: bold;
 }
 
 #quiz-button {
-    /* background-color: orangered; */
+    background-color: orangered;
     font-size: large;
-    /* color: white; */
+    color: white;
 }
 
 #intro {
@@ -33,7 +33,7 @@ body{
 #keyWord {
     font-size: larger;
     font-weight: bolder;
-}
+} */
 
 /* New layout css */
 .container {
