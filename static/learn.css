@@ -52,7 +52,8 @@ body {
 }
 #directQuiz {
     background-color: orangered;
-    color:white
+    color:white;
+    transition: background-color 0.2s ease-out 1ms;
 }
 #directQuiz:hover {
     background-color: #cc3700;
