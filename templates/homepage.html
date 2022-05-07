@@ -3,13 +3,42 @@
 
 {% block content %}
 <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
-    <script src="{{url_for('static', filename='home.js')}}"></script>
+<script src="{{url_for('static', filename='home.js')}}"></script>
+
 <div class="page_container">
-  <div class="container">
+  <!-- new layout -->
+  <div class="purpose">
+    <div class="purpose_text">
+      <div class="purpose_title">Welcome to basketball court!</div>
+      <span class="purpose_p">In this web app, we will learn basic concept of basketball’s 5 positions, their duty and overall position sketch in a court.</span>
+    </div>
+    <!-- <img src="{{url_for('static', filename='purpose_img4.png')}}" width="20%"> -->
+  </div>
+
+  <div class="entry">
+    <button class="entry_btn home_card" id="learn-button">
+      <img class="entry_img" src="https://cdn.cnn.com/cnnnext/dam/assets/210616193554-01-michael-jordan-athlete-activism-super-tease.jpg">
+      Start Learning
+    </button>
+    <button class="entry_btn home_card" id="quiz-button">
+      <img class="entry_img" src="https://cdn.vox-cdn.com/thumbor/ujnueXm15v3VCD0bK7qK23xpnQw=/0x0:4986x3324/1400x1400/filters:focal(2095x1264:2891x2060):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/54263751/usa_today_9869236.0.jpg">
+      Take Quiz
+    </button>
+  </div>
+  <div class="abstract">
+    In the <span class="bold">learning section</span>, we will teach you 5 position on court: Point Guard (PG), Shooting Guard (SG), Small Forward (SF), Power Forward (PF), Center (C),
+    and how they collaborate as a team. <br>
+    <br>
+    In the <span class="bold">quiz section</span>, we will be tested on the information you just learned in the form of multiple choice and drag and drop questions and receive a score.
+  </div>
+  <!-- new layout end -->
+
+
+  <!-- <div class="container">
     <div class="row">
       <div class="col">
           <h1 class="text-center ">Welcome to basketball court!</h1>
-          <h2 class="text-center " id="intro">In this web app, we will learn basic concept of <span id="keyWord">basketball’s 5 positions</span>, their duty and overall position sketch  in a court.</h2>
+          <h2 class="text-center" id="intro">In this web app, we will learn basic concept of <span id="keyWord">basketball’s 5 positions</span>, their duty and overall position sketch  in a court.</h2>
       </div>
     </div>
     <div class="row">
@@ -28,7 +57,9 @@
             </button>
         </div>
     </div>
-  </div>
+  </div> -->
+
+
 </div>
 
 {% endblock %}

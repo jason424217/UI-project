@@ -9,7 +9,7 @@ function generateUI(data){
         let img = $(`<div >`).html("")
         img.addClass("col-md-8 text-center")
         img.css({"margin":"10px"})
-       
+
         card_body.html(`<img style="width:100%" src=${data.courtImg}/>`)
         card.append(card_body)
         img.append(card)
@@ -23,8 +23,8 @@ function generateUI(data){
     $("#move-img").attr("src",data.courtMoveMap)
     }
     $("#source").attr("src",data.video)
-    
-    
+
+
     $("#position-text").html(data.description)
 
     // keep nav bar's seleced option
@@ -42,7 +42,7 @@ function fetchData(id){
         success:function(result){
             console.log(result["data"])
             generateUI(result["data"])
-            
+
         },
         error:function(request,status,error){
             console.log("Error")
@@ -54,7 +54,7 @@ function fetchData(id){
 }
 
 $(document).ready(()=>{
-    
+
     $(".active").removeClass("active");
    $("#study-link").addClass("active");
     fetchData(id)
@@ -75,16 +75,16 @@ $(document).ready(()=>{
     $(".progress-bar").html(`Progress : ${id}/6`)
 
     $(document).on('click','#prev',()=>{
-        
+
             window.location.href=`/learn/${id-1}`
-        
-       
+
+
     })
     $(document).on('click','#next',()=>{
-        
+
         window.location.href=`/learn/${id+1}`
-    
-   
+
+
     })
     $(document).on('click','.quiz',()=>{
 
